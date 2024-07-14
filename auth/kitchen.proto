@@ -52,9 +52,10 @@ message Info {
 }
 
 message NewData {
-    string name = 1;
-    string description = 2;
-    string phone_number = 3;
+    string id = 1;
+    string name = 2;
+    string description = 3;
+    string phone_number = 4;
 }
 
 message UpdatedData {

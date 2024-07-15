@@ -8,6 +8,7 @@ service User {
     rpc GetProfile (ID) returns (Profile);
     rpc UpdateProfile (NewInfo) returns (Details);
     rpc DeleteProfile (ID) returns (Void);
+    rpc ValidateUser (ID) returns (Status);
 }
 
 message ID {
@@ -45,3 +46,7 @@ message Details {
 }
 
 message Void {}
+
+message Status {
+    bool exists = 1;
+}

@@ -11,6 +11,7 @@ service Kitchen {
     rpc Delete (ID) returns (Void);
     rpc Fetch (Pagination) returns (Kitchens);
     rpc Search (SearchDetails) returns (Kitchens);
+    rpc ValidateKitchen (ID) returns (Status);
 }
 
 message CreateRequest {
@@ -98,4 +99,8 @@ message SearchDetails {
     string cuisine_type = 2;
     float rating = 3;
     Pagination pagination = 4;
+}
+
+message Status {
+    bool exists = 1;
 }

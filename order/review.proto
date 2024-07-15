@@ -37,7 +37,6 @@ message ReviewDetails {
     float rating = 3;
     string comment = 4;
     string created_at = 5;
-    string updated_at = 6;
 }
 
 message Reviews {

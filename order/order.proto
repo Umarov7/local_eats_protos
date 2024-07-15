@@ -6,7 +6,7 @@ package order;
 
 service Order {
     rpc MakeOrder (NewOrder) returns (NewOrderResp);
-    rpc ChangeStatus (ID) returns (UpdatedOrder);
+    rpc ChangeStatus (Status) returns (UpdatedOrder);
     rpc GetOrderByID (ID) returns (OrderInfo);
     rpc FetchOrdersForCustomer (Pagination) returns (OrdersCustomer);
     rpc FetchOrdersForKitchen (Filter) returns (OrdersKitchen);
@@ -37,7 +37,7 @@ message NewOrderResp {
     string created_at = 9;
 }
 
-message ID {
+message Status {
     string id = 1;
     string status = 2;
 }
@@ -46,6 +46,10 @@ message UpdatedOrder {
     string id = 1;
     string status = 2;
     string updated_at = 3;
+}
+
+message ID {
+    string id = 1;
 }
 
 message ItemDetails {

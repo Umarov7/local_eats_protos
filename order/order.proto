@@ -18,10 +18,11 @@ message Item {
 }
 
 message NewOrder {
-    string kitchen_id = 1;
-    repeated Item items = 2;
-    string delivery_address = 3;
-    string delivery_time = 4;
+    string user_id = 1;
+    string kitchen_id = 2;
+    repeated Item items = 3;
+    string delivery_address = 4;
+    string delivery_time = 5;
 }
 
 message NewOrderResp {

@@ -7,7 +7,6 @@ package review;
 service Review {
     rpc RateAndComment (NewReview) returns (NewReviewResp);
     rpc GetReviewOfKitchen (Filter) returns (Reviews);
-    rpc DeleteReview (ID) returns (Void);
 }
 
 message NewReview {
@@ -48,9 +47,3 @@ message Reviews {
     int32 page = 4;
     int32 limit = 5;
 }
-
-message ID {
-    string id = 1;
-}
-
-message Void{}

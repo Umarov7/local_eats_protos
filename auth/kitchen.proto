@@ -12,6 +12,8 @@ service Kitchen {
     rpc Fetch (Pagination) returns (Kitchens);
     rpc Search (SearchDetails) returns (Kitchens);
     rpc ValidateKitchen (ID) returns (Status);
+    rpc IncrementTotalOrders (ID) returns (Void);
+    rpc UpdateRating (Rating) returns (Void);
 }
 
 message CreateRequest {
@@ -109,4 +111,9 @@ message SearchDetails {
 
 message Status {
     bool exists = 1;
+}
+
+message Rating {
+    string id = 1;
+    float rating = 2;
 }

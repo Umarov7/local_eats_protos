@@ -49,7 +49,9 @@ message ResetResponse {
 }
 
 message Code {
-    string code = 1;
+    string email = 1;
+    string code = 2;
+    string password = 3;
 }
 
 message Status {

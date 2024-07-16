@@ -14,6 +14,7 @@ service Kitchen {
     rpc ValidateKitchen (ID) returns (Status);
     rpc IncrementTotalOrders (ID) returns (Void);
     rpc UpdateRating (Rating) returns (Void);
+    rpc UpdateRevenue (Revenue) returns (Void);
 }
 
 message CreateRequest {
@@ -116,4 +117,9 @@ message Status {
 message Rating {
     string id = 1;
     float rating = 2;
+}
+
+message Revenue {
+    string id = 1;
+    float revenue = 2;
 }

@@ -10,7 +10,7 @@ service Auth {
     rpc ForgotPassword (ResetRequest) returns (ResetResponse);
     rpc ResetPassword (Code) returns (Status);
     rpc RefreshToken (Token) returns (Tokens);
-    rpc Logout (Token) returns (Void);
+    rpc Logout (Token) returns (Token);
 }
 
 message RegisterRequest {

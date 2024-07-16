@@ -60,6 +60,12 @@ message NewData {
     string phone_number = 4;
 }
 
+message NewDataNoID {
+    string name = 1;
+    string description = 2;
+    string phone_number = 3;
+}
+
 message UpdatedData {
     string id = 1;
     string owner_id = 2;

@@ -42,6 +42,10 @@ message Status {
     string status = 2;
 }
 
+message StatusNoID {
+    string status = 1;
+}
+
 message UpdatedOrder {
     string id = 1;
     string status = 2;

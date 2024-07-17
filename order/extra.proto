@@ -30,17 +30,11 @@ message DishNoID {
     float revenue = 3;
 }
 
-message OrderPerHour {
-    int32 hour = 1;
-    int32 orders_count = 2;
-}
-
 message Statistics {
     int32 total_orders = 1;
     float total_revenue = 2;
     float average_rating = 3;
     repeated Dish top_dishes = 4;
-    repeated OrderPerHour busiest_hours = 5;
 }
 
 message Cuisine {

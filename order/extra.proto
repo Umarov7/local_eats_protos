@@ -24,6 +24,12 @@ message Dish {
     float revenue = 4;
 }
 
+message DishNoID {
+    string name = 1;
+    int32 orders_count = 2;
+    float revenue = 3;
+}
+
 message Statistics {
     int32 total_orders = 1;
     float total_revenue = 2;

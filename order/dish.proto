@@ -47,7 +47,7 @@ message DishInfo {
     string category = 6;
     repeated string ingredients = 7;
     repeated string allergens = 8;
-    repeated string nutrition_info = 9;
+    NutritionalInfo nutrition_info = 9;
     repeated string dietary_info = 10;
     bool available = 11;
     string created_at = 12;

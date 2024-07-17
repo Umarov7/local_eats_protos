@@ -48,6 +48,11 @@ message Kitchen {
     int32 orders_count = 3;
 }
 
+message KitchenNoID {
+    string name = 1;
+    int32 orders_count = 2;
+}
+
 message Activity {
     int32 total_orders = 1;
     float total_spent = 2;

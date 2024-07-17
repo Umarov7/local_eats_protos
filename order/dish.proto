@@ -100,3 +100,10 @@ message Dishes {
     int32 page = 3;
     int32 limit = 4;
 }
+
+message NutritionalInfo {
+    int32 calories = 1;
+    int32 protein = 2;
+    int32 fat = 3;
+    int32 carbs = 4;
+}

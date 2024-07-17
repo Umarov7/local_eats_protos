@@ -71,11 +71,11 @@ message WeeklySchedule {
 
 message WorkingHours {
     string kitchen_id = 1;
-    repeated WeeklySchedule schedule = 2;
+    WeeklySchedule schedule = 2;
 }
 
 message WorkingHoursNoID {
-    repeated WeeklySchedule schedule = 1;
+    WeeklySchedule schedule = 1;
 }
 
 message WorkingHoursResp {

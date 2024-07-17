@@ -65,22 +65,18 @@ message DaySchedule {
     string close = 2;
 }
 
-message WeeklySchedule {
-    map<string, DaySchedule> schedule = 1;
-}
-
 message WorkingHours {
     string kitchen_id = 1;
-    WeeklySchedule schedule = 2;
+    map<string, DaySchedule> schedule = 2;
 }
 
 message WorkingHoursNoID {
-    WeeklySchedule schedule = 1;
+    map<string, DaySchedule> schedule = 1;
 }
 
 message WorkingHoursResp {
     string kitchen_id = 1;
-    repeated WeeklySchedule schedule = 2;
+    map<string, DaySchedule> schedule = 2;
     string updated_at = 3;
 }
 
